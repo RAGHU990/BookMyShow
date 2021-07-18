@@ -49,7 +49,7 @@ return <>
     </div>
     <div >
         <div className=" flex items-center gap-3" >
-        <span className="text-gray-400 text-xs flex items-center " >
+        <span className="text-gray-400 text-xs flex items-center hover:text-white cursor-pointer" >
                 Madurai <BiChevronDown/>
             </span>
             <div>
