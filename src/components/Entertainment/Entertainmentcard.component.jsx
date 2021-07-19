@@ -4,7 +4,9 @@ import Slider from "react-slick";
 const EntertainmentCard = (props) => {
 return <>
 <div className="w-full h-30 px-2">
-    <img src={props} alt="entertainment image" className="w-full h-full " />
+    <img src={props.src} 
+    alt="entertainment image" 
+    className="w-full h-full  rounded-xl" />
 </div>
  </>
 };
@@ -26,12 +28,44 @@ const EntertainmentCardSlider = () => {
         slidesToShow:4,
         SlidestoScroll:4,
         InitialSlide: 0,
+        responsive: [ {
+            breakpoints: 1024,
+            settings : {
+                slidesToShow: 3,
+                SlidestoScroll:2,
+                Infinite: true,
+                
+            },
+        },
+           { 
+              breakpoints: 600,
+            settings : {
+                slidesToShow: 2,
+                SlidestoScroll:1,
+                InitialSlide: 1,
+            },
+        },
+        { 
+            breakpoints: 480,
+          settings: {
+              slidesToShow: 2,
+              SlidestoScroll:1,
+              
+          },
+      },
+      ],
     };
     return ( <>
-    <Slider>
-
-    </Slider>
+    
+    <Slider {...settings}>
+        {EntertainmentImage.map((image) => (
+          <EntertainmentCard src={image} />
+        ))}
+      </Slider>
+    
      </>
     );
 };
+
+export default EntertainmentCardSlider;
 

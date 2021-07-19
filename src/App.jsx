@@ -7,8 +7,8 @@ import DefaultHOC from "./HOC/Default.HOC";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-//Components
-import Temp from "./components/temp";
+//Pages
+import Homepage from "./pages/Home.page";
 
 
 
@@ -16,7 +16,7 @@ function App() {
   return (
      <> 
      <Route/>
-       <DefaultHOC  path ="/" component={Temp}/>
+       <DefaultHOC  path ="/" component={Homepage}/>
        
      </>
       
