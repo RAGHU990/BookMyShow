@@ -2,7 +2,10 @@ import React from "react";
 
 //component
 import EntertainmentCardSlider from "../components/Entertainment/Entertainmentcard.component";
-import Premier from "../components/Premier/Premier.component";
+import { PosterSlider } from "../components/PosterSlider/Posterslider.component";
+
+//config
+import TempPoster from "../config/TempPoster.config"
 
 const Homepage = () => {
     return <> 
@@ -27,7 +30,7 @@ const Homepage = () => {
              </div>
              
          </div>
-        <Premier />
+        <PosterSlider  images={TempPoster} title="Premieres" subtitle="Brand new releases every Friday"/>
         </div>
     
      </div>
