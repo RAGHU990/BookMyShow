@@ -2,11 +2,11 @@ import React from 'react'
 
 export const Poster = (props) => {
     return ( <>
-        <div className="flex flex-col items-starts gap-2 px-3">
-            <div className="h-80">
+        <div className="flex flex-col items-starts gap-2 px-1 md: px-3 ">
+            <div className="  h-40  md:h-80">
                 <img src={props.src} 
                 alt={props.title} 
-                className="w-full h-full rounded-xl"/>
+                className="w-full h-full rounded-md"/>
             </div>
             <h3
           className={`text-lg font-bold ${

@@ -7,7 +7,8 @@ import Poster from '../Poster/poster.component';
 //Configs
 import PosterCarosalsettings from '../../config/PosterCarosal.config';
 
-export const PosterSlider = (props) => {
+export const PosterSlider = (props) => { 
+  const sliderConfig = props.config ? props.config : PosterCarosalsettings;
     return (
         <>
             <div className="flex flex-col items-start px-2 my-2"> 
@@ -23,7 +24,7 @@ export const PosterSlider = (props) => {
         </p>
        </div>
        
-       <Slider {...PosterCarosalsettings}>
+       <Slider {...sliderConfig}>
        {props.images.map((image) => (
            <Poster {...image} isDark={props.isDark} />
        ) )}
