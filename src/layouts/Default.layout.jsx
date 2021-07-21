@@ -1,6 +1,6 @@
 import React from "react";
 
-//Component //
+//Component 
 import Navbar from "../components/Navbar/navbar.component";
 import HeroCarosal from "../components/HeroCarosal/HeroCarosal.component";
 
