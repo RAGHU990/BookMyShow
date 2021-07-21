@@ -10,18 +10,22 @@ import PosterCarosalsettings from '../../config/PosterCarosal.config';
 export const PosterSlider = (props) => {
     return (
         <>
-            <div className="flex flex-col items-start px-2"> 
-       <h3  className="text-white text-xl font-bold">
+            <div className="flex flex-col items-start px-2 my-2"> 
+       <h3  className={` text-2xl font-bold ${
+            props.isDark ? "text-white" : "text-gray-800"
+          }`}>
         {props.title}
         </h3>
-       <p className="text-white text-sm ">
+       <p className={` text-sm ${
+            props.isDark ? "text-white" : "text-gray-800"
+          }`}>
         {props.subtitle}
         </p>
        </div>
        
        <Slider {...PosterCarosalsettings}>
        {props.images.map((image) => (
-           <Poster {...image} isDark />
+           <Poster {...image} isDark={props.isDark} />
        ) )}
        </Slider>
         </>

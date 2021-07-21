@@ -30,12 +30,29 @@ const Homepage = () => {
              </div>
              
          </div>
-        <PosterSlider  images={TempPoster} title="Premieres" subtitle="Brand new releases every Friday"/>
+        <PosterSlider  images={TempPoster} 
+        title="Premieres"
+         isDark/>
         </div>
-    
-     </div>
-       
     </div>
+     </div>
+       <div className="container mx-auto px-4 my-8">
+       <PosterSlider  
+       images={TempPoster} 
+        title="Online Streaming Events"
+         isDark={false}/>
+       </div>
+
+       
+       <div className="container mx-auto px-4 my-8">
+       <PosterSlider  
+       images={TempPoster} 
+        title="Outdoor Events"
+         isDark={false}/>
+       </div>
+
+   
+       
     
     </>
 };
