@@ -1,10 +1,11 @@
 import React from 'react'
+import MovieHero from '../components/MovieHero/MovieHero.component';
+
 
 export const Moviepage = () => {
     return (
          <>
-            <h1>Hi</h1>
-            
+            <MovieHero/>
         </>
     )
 }
